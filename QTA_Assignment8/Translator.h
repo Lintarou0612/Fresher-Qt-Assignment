@@ -1,0 +1,42 @@
+#ifndef TRANSLATOR_H
+#define TRANSLATOR_H
+
+#include <QObject>
+#include <QTranslator>
+
+#define STRING_ID(Name, Value) \
+    public: \
+    Q_PROPERTY(QString Name READ Name NOTIFY languageChanged) \
+    static QString Name() { return (Value); }
+class Translator : public QObject
+{
+    Q_OBJECT
+    STRING_ID(WINDOW_TITLE_STRING_ID, tr("WINDOW_TITLE_ID"))
+    STRING_ID(CREATION_TITLE_STRING_ID , tr("CREATION_TITLE_ID"))
+    STRING_ID(QUEST_STRING_ID, tr("QUEST_ID"))
+    STRING_ID(NAMEFORM_STRING_ID, tr("NAMEFORM_ID"))
+    STRING_ID(NAMEFORM_PLACEHOLD_STRING_ID, tr("NAMEFORM_PLACEHOLD_ID"))
+    STRING_ID(CREATE_BUTTON_STRING_ID, tr("CREATE_BUTTON_ID"))
+    STRING_ID(FAMILYNAME_TITLE_FORM_STRING_ID, tr("FAMILYNAME_TITLE_FORM_ID"))
+    STRING_ID(FAMILYNAME_PLACEHOLD_STRING_ID, tr("FAMILYNAME_PLACEHOLD_ID"))
+    STRING_ID(NAME_TITLE_FORM_STRING_ID, tr("NAME_TITLE_FORM_ID"))
+    STRING_ID(NAME_PLACEHOLD_STRING_ID, tr("NAME_PLACEHOLD_ID"))
+    STRING_ID(EMAIL_TITLE_FORM_STRING_ID, tr("EMAIL_TITLE_FORM_ID"))
+    STRING_ID(EMAIL_PLACEHOLD_STRING_ID, tr("EMAIL_PLACEHOLD_ID"))
+    STRING_ID(ADDRESS_TITLE_FORM_STRING_ID, tr("ADDRESS_TITLE_FORM_ID"))
+    STRING_ID(ADDRESS_PLACEHOLD_STRING_ID, tr("ADDRESS_PLACEHOLD_ID"))
+    STRING_ID(SUBMIT_STRING_ID, tr("SUBMIT_ID"))
+public:
+    explicit Translator(QObject *parent = nullptr);
+
+signals:
+    void languageChanged();
+
+public:
+    Q_INVOKABLE void setTranslation(QString translation);
+
+private:
+    QTranslator m_translator;
+};
+
+#endif // TRANSLATOR_H

@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Home.qml</file>
+        <file>App1.qml</file>
+        <file>App17.qml</file>
+        <file>App.qml</file>
+    </qresource>
+</RCC>

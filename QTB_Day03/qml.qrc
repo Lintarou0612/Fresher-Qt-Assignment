@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Button.qml</file>
+        <file>createComponent.js</file>
+        <file>dateTimeHelper.js</file>
+        <file>timerHelper.js</file>
+    </qresource>
+</RCC>

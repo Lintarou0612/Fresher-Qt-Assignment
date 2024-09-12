@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>RunningText.qml</file>
+        <file>ScrollText.qml</file>
+        <file>fonts/NotoSans-Regular.ttf</file>
+        <file>fonts/NotoSansJP-Bold.otf</file>
+        <file>fonts/gulim baek light.ttf</file>
+    </qresource>
+</RCC>

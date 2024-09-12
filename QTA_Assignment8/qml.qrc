@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Creation.qml</file>
+        <file>Form.qml</file>
+        <file>retranslateUI.js</file>
+    </qresource>
+</RCC>
